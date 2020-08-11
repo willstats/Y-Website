@@ -1,0 +1,317 @@
+html { overflow-y: scroll; overflow-x:hidden; }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#landing {
+    padding-top: 13em;
+    padding-bottom: 15em;
+}
+
+#name {
+    padding-bottom: 6em;
+    text-align: center;
+}
+
+#name h1 {
+    font-weight: 300;
+    margin-top: -10px;
+}
+
+#line1 {
+    font-size: 36px;
+    margin-bottom: 14px;
+}
+
+#line2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#line3 {
+    font-size: 40px;
+}
+
+#smaller {
+    font-size: 32px;
+}
+
+#landing img {
+    width: 200px;
+    height: auto;
+}
+
+#scroll h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    color: #888;
+}
+
+.info {
+    margin-left: 10%;
+    width: 80%;
+}
+
+.info h1 {
+    text-align: left;
+    font-weight: 700;
+    font-size: 48px;
+    color: #888;
+}
+
+.info p {
+    text-align: left;
+    font-weight: 300;
+    font-size: 20px;
+    color: #000;
+}
+
+.info h2 {
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    color: #222;
+}
+
+#whatisy {
+    margin-top: 100px;
+}
+
+#button {
+    font-weight: 700;
+    color: #AC1F23;
+    border: 1px black solid;
+    border-radius: 15px;
+    padding: 10px 10px;
+    width: 200px;
+    margin-left: 15%;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0px 5px 10px #8888884d;
+    transition: box-shadow 0.5s;
+}
+
+#whatisy a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+#button:hover {
+    box-shadow: 0px 8px 10px #88888869;
+}
+
+/* example */
+
+#example {
+    margin-top: 60px;
+}
+
+#example img {
+    width: 300px;
+    height: auto;
+}
+
+#example h4 {
+    color: #888;
+    font-weight: 300;
+    text-align: center;
+    font-size: 13px;
+    margin: 0px;
+}
+
+/* ai */
+
+#ai {
+    margin-top: 100px;
+}
+
+#ac1 {
+    margin-top: 30px;
+}
+
+#ac3 {
+    padding-bottom: 60px;
+}
+
+/* expandable sections */
+
+.accordian {
+    margin-top: 10px;
+}
+
+.accordian__button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 1px #000 solid;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background: #fff;
+    color: #AC1F23;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    transition: background 0.2s;
+    transition: border-radius 0.2s;
+}
+
+.accordian__button::after {
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
+}
+
+.accordian__button--active { 
+    background: #eee; 
+    border-radius: 10px 10px 0 0;
+}
+
+.accordian__button--active::after { 
+    content: '\25b4'; 
+}
+
+.accordian__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+
+    padding: 0 15px;
+    background: #f7f7f7;
+    border-radius: 0 0 10px 10px;
+}
+
+.accordian__content p {
+    font-size: 14px;
+    color: #000;
+}
+
+
+/* different widths */
+
+@media (min-width: 1200px) {
+
+    body {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    #preface {
+        float: left;
+        width: 45%;
+        margin-bottom: 50px;
+    }
+
+    #whatisy {
+        float: right;
+        width: 45%;
+        margin-top: 0px;
+    }
+
+    #whatisy h2 {
+        margin-bottom: 150px;
+    }
+
+    #button {
+        margin-left: 0;
+        margin-top: 0px;
+        width: 300px;
+        padding: 20px 20px;
+        font-size: 24px;
+    }
+
+
+    #example img {
+        width: 300px;
+        height: auto;
+        float: right;
+        margin-right: 10%;
+    }
+
+    #example h4 {
+        font-size: 18px;
+        width: 20%;
+        float: left;
+        padding-top: 80px;
+    }
+
+    .accordian {
+        width: 70%;
+        float: left;
+    }
+
+    #ai {
+        margin-top: 100px;
+        top: 100%;
+        padding-bottom: 200px;
+        float: left;
+    }
+
+    #ac3 {
+        padding-bottom: 0px;
+    }
+
+    #aiinfo {
+        width: 45%;
+        margin: 0;
+        display: inline-block;
+    }
+
+    #accords {
+        width: 45%;
+        float: right;
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    #accords {
+        margin-top: 10px;
+    }
+}
+
+
+/* down arrow */
+  
+  .arrow{
+    position: absolute;
+    left: 50%;
+    margin-top: 20px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid #888;
+    border-right: 2px solid #888;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 4s infinite;
+  }
+  
+  @keyframes animate {
+    0%{
+      opacity: 0;
+      transform: rotate(45deg);
+    translate: -20px, -20px;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      transform: rotate(45deg);
+    translate: 20px, 20px;
+    }
+  }

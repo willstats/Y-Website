@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png">
+</head>
+<body>
+    <div id="landing">
+        <header>
+            <div id="name">
+                <img src="images/logo.png">
+                <h1 id="line1">Exploring</h1>
+                <h1 id="line2">Arificial Intelligence</h1>
+                <h1 id="line3">in Geodesic Y</h1>
+            </div>
+            <div id="scroll">
+                <h2>scroll down to enter</h2>
+                <div class="arrow">
+                    <span></span>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="info">
+        <div id="preface">
+            <h1>Preface</h1>
+            <p>Geodesic Y is a simple board game with perfect information. Over the course of the summer, we have been analyzing this game, recreating it and creating forms of artificial intelligence to play the game. Using methods like Negamax, Montecarlo Search Trees, and OpenSpiel, we have found and analyzed several effective solvers.</p>
+            <h2>The Geodesic Y team, supervised by Jacob Garber, consists of Ahmet Elkureji, Yash Multani, Sergii Penner, Ahmed Siad-Omar, and Will Zahary Henderson.</h2>
+        </div>
+        <div id="whatisy">
+            <h1>What is Y?</h1>
+            <p>Y is a two-player abstract strategy board game played on a triangular board. Both players, each represented by two different colors, take turns placing their color onto spaces on the board. The objective of the game is to create a path with your color that connects all three sides of the triangle before the other player does.</p>
+            <h2>We recommend you try the game out for yourself! Click on the button to be sent to our recreation of the game where you can play against someone else, or against one of our artificial intelligence players.</h2>
+            <a href="https://ahmedsiad.github.io/Geodesic-Y" target="_Blank"><h3 id="button">Play Geodesic Y</h3></a>
+        </div>
+        <div id="example">
+            <img src="images/example.png">
+            <h4>A sample game between white and black. White won this game as it created a continuous path that connects all three sides together before black did.</h4>
+        </div>
+        <div id="ai">
+            <div id="aiinfo">
+                <h1>Artificial Intelligence</h1>
+                <p>Artificial Intelligence is used in combinatorial game theory to play (or "solve") the game. In our approach to creating Artificial Intelligence solvers, we developed three different algorithms.</p>
+                <h2>Click on the tabs to learn more about each of the AI methods we used.</h2>
+            </div>
+            <div id="accords">
+                <div class="accordian" id="ac1">
+                    <button type="button" class="accordian__button">Random</button>
+                    <div class="accordian__content">
+                        <p>
+                            Although this may defeat the purpose of creating AI to play board games, random is still a valid algorithm. It consists of randomly selecting any available move to play. Simple and easy to understand, but not so good at playing the game!
+                        </p>
+                    </div>
+                </div>
+                <div class="accordian" id="ac2">
+                    <button type="button" class="accordian__button">Minimax</button>
+                    <div class="accordian__content">
+                        <p>
+                            Minimax works by looking a certain number of moves into the future, searching all possible game states, and then finding the one that gives the best position for that player. The traditional minmax algorithm involves completely searching all possible ending game states, but this approach often takes a very long time. To counter this, we implemented an improvement known as alpha-beta pruning, which significantly cuts down the number of searched game states. Combine this with a limited search depth and a good way to know which board position is better for a certain player, and minimax can take you very far.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordian" id="ac3">
+                    <button type="button" class="accordian__button">Montecarlo Tree Search</button>
+                    <div class="accordian__content">
+                        <p>
+                            Monte Carlo Tree Search (MCTS) is a very intriguing algorithm. Instead of evaluating how good a position is for a player, MCTS will instead simulate a game from a given board position by randomly selecting moves until a player has won. Doing this thousands of times will generate an MCTS tree with statistics on many possible board positions, and if given enough time, MCTS will theoretically converge to minimax while requiring far fewer searches.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="accordians.js"></script>
+</html>
